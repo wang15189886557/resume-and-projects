@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的编程作品展示</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+
+        /* 页面背景与基础样式 */
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 导航栏样式 */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* 主要内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 个人简介区域 */
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .intro h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 作品展示区域 */
+        .works-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* 作品卡片样式 */
+        .work-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .work-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .work-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .work-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+
+        .work-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        /* 链接样式 */
+        .work-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .work-link:hover {
+            background-color: #2980b9;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 5rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .intro h1 {
+                font-size: 1.8rem;
+            }
+
+            .works-title {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">我的编程作品</div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 个人简介 -->
+        <section class="intro">
+            <h1>编程作品展示</h1>
+            <p>专注于前端开发、AI应用与游戏开发领域，以下是我的部分编程作品，涵盖简易网页、AI音乐、AI视频、游戏等方向，点击作品卡片可查看详情。</p>
+        </section>
+
+        <!-- 作品展示 -->
+        <section class="works">
+            <h2 class="works-title">我的作品</h2>
+            <div class="works-grid">
+                <!-- 简易网页作品 -->
+                <div class="work-card">
+                    <a href="#" target="_blank"> <!-- 后续替换#为实际链接 -->
+                        <img src="https://picsum.photos/seed/web/600/400" alt="简易网页作品" class="work-img">
+                    </a>
+                    <div class="work-info">
+                        <h3>简易网页</h3>
+                        <p>基于HTML/CSS/JavaScript开发的各类简易网页应用，包含响应式布局、交互效果等特性。</p>
+                        <a href="#" target="_blank" class="work-link">查看作品</a> <!-- 后续替换#为实际链接 -->
+                    </div>
+                </div>
+
+                <!-- AI音乐作品 -->
+                <div class="work-card">
+                    <a href="#" target="_blank"> <!-- 后续替换#为实际链接 -->
+                        <img src="https://picsum.photos/seed/ai-music/600/400" alt="AI音乐作品" class="work-img">
+                    </a>
+                    <div class="work-info">
+                        <h3>AI音乐</h3>
+                        <p>结合人工智能技术开发的音乐生成、音频处理类应用，支持旋律创作、风格转换等功能。</p>
+                        <a href="#" target="_blank" class="work-link">查看作品</a> <!-- 后续替换#为实际链接 -->
+                    </div>
+                </div>
+
+                <!-- AI视频作品 -->
+                <div class="work-card">
+                    <a href="#" target="_blank"> <!-- 后续替换#为实际链接 -->
+                        <img src="https://picsum.photos/seed/ai-video/600/400" alt="AI视频作品" class="work-img">
+                    </a>
+                    <div class="work-info">
+                        <h3>AI视频</h3>
+                        <p>基于AI技术的视频生成、编辑、风格化处理作品，涵盖视频换脸、内容生成等方向。</p>
+                        <a href="#" target="_blank" class="work-link">查看作品</a> <!-- 后续替换#为实际链接 -->
+                    </div>
+                </div>
+
+                <!-- 游戏作品 -->
+                <div class="work-card">
+                    <a href="#" target="_blank"> <!-- 后续替换#为实际链接 -->
+                        <img src="https://picsum.photos/seed/game/600/400" alt="游戏作品" class="work-img">
+                    </a>
+                    <div class="work-info">
+                        <h3>游戏开发</h3>
+                        <p>使用Python/JavaScript等语言开发的休闲小游戏，包含逻辑设计、交互实现等核心内容。</p>
+                        <a href="#" target="_blank" class="work-link">查看作品</a> <!-- 后续替换#为实际链接 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-container">
+            <p>编程作品展示页 | 求职/求学专用</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;">© 2025 我的编程作品集</p>
+        </div>
+    </footer>
+</body>
+</html>
